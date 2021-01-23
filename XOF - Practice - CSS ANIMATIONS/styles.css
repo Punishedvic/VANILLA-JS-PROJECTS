@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(./fonts/Roboto-Thin.ttf);
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    font-family: Roboto-Thin;
+    color: whitesmoke;
+}
+
+p {
+    color: white;
+    font-family: Roboto-Thin;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+
+#label {
+    color: white;
+    font-family: Roboto-Thin;
+    text-align: center;
+    font-size: 10px;
+}
+
+#phantom {
+    height: 400px;
+}
+
+#phantom:hover {
+    transform: scaleX(-1);
+    animation-name: shine;
+    animation-duration: 2s;
+}
+
+#phantom {
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+@keyframes shine {
+    from {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
