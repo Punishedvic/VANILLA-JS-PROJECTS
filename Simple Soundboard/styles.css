@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/844838834732595510/09747ADE6D4D8F25A2A6731576B3663B81500D36/');
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.btn {
+    background-color: wheat;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
