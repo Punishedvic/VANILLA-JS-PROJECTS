@@ -1,6 +1,18 @@
+// INIT 
+const start = document.querySelector('#start');
+const app = document.querySelector('#app');
+const main = document.querySelector('main');
+start.addEventListener('click', () => {
+    main.style.display = 'none';
+    app.style.display = 'block';
+    comenzar();
+    text.focus();
+});
+
+
 // SELECTORES
-const word = document.querySelector('#word');
 const text = document.querySelector('#text');
+const word = document.querySelector('#word');
 const scoreEl = document.querySelector('#score');
 const timeEl = document.querySelector('#time');
 const endgameEl = document.querySelector('#end-game-container');
@@ -41,18 +53,15 @@ let randomWord;
 let score = 0;
 
 // Comenzar temporizador
+
 let time = 10;
 
-const timeInterval = setInterval(updateTime, 1000);
-
-// dificultad variable
-
-let difficulty = localStorage.getItem('difficulty') != null ? localStorage.getItem('difficulty') : 'medium';
-
-difficultySelect.value = localStorage.getItem('difficulty') != null ? localStorage.getItem('difficulty') : 'medium';
-
+function comenzar() {
+    if (app.style.display === 'block') {
+        const timeInterval = setInterval(updateTime, 1000);
+    }
+}
 // focus en el texto 
-text.focus();
 
 
 
@@ -81,7 +90,7 @@ function updateTime() {
     time--;
     timeEl.innerHTML = time + "s";
     if (time === 0) {
-        clearInterval(timeInterval);
+        clearInterval();
         // Finalizar tiempo
         gameOver();
     }
@@ -111,30 +120,9 @@ text.addEventListener('input', e => {
     if (insertedText === randomWord) {
         addWordToDOM();
         updateScore();
-
         // Clear
         e.target.value = '';
-
-        if (difficulty === 'easy peezy') {
-            time += 2;
-        } else if (difficulty === 'cumbia 420') {
-            time += 3;
-        } else {
-            time += 5;
-        }
-
+        time += 2;
         updateTime();
     }
 });
-
-//DIFICULTAD
-
-settingsBtn.addEventListener('click', () => {
-    settings.classList.toggle('hide');
-})
-
-settingsForm.addEventListener('change', e => {
-    difficulty = e.target.value;
-    localStorage.setItem('difficulty', difficulty);
-
-})

@@ -11,42 +11,36 @@
 </head>
 
 <body>
-    <button id="settings-btn" class="settings-btn">
-    <i class="fas fa-cog"></i>
-</button>
 
-    <div id="settings" class="settings">
-        <form action="" id="settings-form">
-            <div>
-                <label for="difficulty">Dificultad: </label>
-                <select name="" id="difficulty">
-        <option value="easy">easypeezy</option>
-        <option value="medium">cumbia420</option>
-        <option value="hard">KELOKE</option>
-    </select>
-            </div>
-        </form>
+    <main>
+        <h1>TIPEANDO CON L-GANTE</h1>
+        <p>¡Tenés 10 segundos!</p>
+        <div id="start">
+            MANDALE CUMBIA 420 PA LO NEGRO
+        </div>
+    </main>
+
+    <div id="app">
+
+        <div class="container">
+            <h2>TIPEANDO CON L-GANTE</h2>
+            <small>Mandale mecha:</small>
+            <h1 id="word"></h1>
+            <input type="text" id="text" autocomplete="off" placeholder="Tipeá acá">
+            <p class="time-container">
+                Tiempo restante: <span id="time">
+                        10s
+                    </span>
+            </p>
+
+            <p class="score-container">
+                Puntaje: <span id="score">0</span>
+            </p>
+
+            <div id="end-game-container" class="end-game-container"></div>
+
+        </div>
     </div>
-
-    <div class="container">
-        <h2>TIPEANDO CON L-GANTE</h2>
-        <small>Mandale mecha:</small>
-        <h1 id="word"></h1>
-        <input type="text" id="text" autocomplete="off" placeholder="Tipeá acá">
-        <p class="time-container">
-            Tiempo restante: <span id="time">
-                10s
-            </span>
-        </p>
-
-        <p class="score-container">
-            Puntaje: <span id="score">0</span>
-        </p>
-
-        <div id="end-game-container" class="end-game-container"></div>
-
-    </div>
-
 
     <script src="/script.js"></script>
 </body>
